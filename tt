@@ -1,0 +1,14 @@
+soma = 0
+notas_inseridas = int(input("Insira a quantidade de notas desejadas"))
+
+for i in range(notas_inseridas):
+    print("Insira a nota",i +1)
+    notas = float(input())
+    soma = soma + notas
+media = soma / notas_inseridas
+print("A soma das notas é:",(round(soma)))
+print("A média é:", (round(media,2)))
+if media >=6:
+        print("Aprovado")
+else:
+        print("reprovado")
