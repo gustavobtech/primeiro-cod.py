@@ -9,6 +9,6 @@ media = soma / notas_inseridas
 print("A soma das notas é:",(round(soma)))
 print("A média é:", (round(media,2)))
 if media >=6:
-        print("Aprovado")
+        print("Você foi aprovado")
 else:
-        print("reprovado")
+        print("Você foi reprovado")
