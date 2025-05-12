@@ -1,14 +1,31 @@
-soma = 0
-notas_inseridas = int(input("Insira a quantidade de notas desejadas"))
+while True:
+    soma = 0
+    nome = input("Qual o nome do usuário:")
+    nota = int(input("Insira a quantidade de notas desejadas:"))
 
-for i in range(notas_inseridas):
-    print("Insira a nota",i +1)
-    notas = float(input())
-    soma = soma + notas
-media = soma / notas_inseridas
-print("A soma das notas é:",(round(soma)))
-print("A média é:", (round(media,2)))
-if media >=6:
+    for i in range(nota):
+      
+       inserir = float(input(f"Insira nota {i+1}:"))
+       
+       soma += inserir
+    media = soma / nota
+
+    
+    print(f"\n{nome} sua média é:",round(media,2))
+
+    if media >= 6:
         print("Você foi aprovado")
-else:
+    else:
         print("Você foi reprovado")
+
+    while True:
+        repetir = input("\nSe deseja continuar, insira 1, para sair insira 0:")
+
+        if repetir == "1":
+            print("\nReconectando...")
+            break
+        elif repetir == "0":
+            print("Programa finalizado com sucesso")
+            exit()
+        else:
+            print("Erro, tente novamente")
